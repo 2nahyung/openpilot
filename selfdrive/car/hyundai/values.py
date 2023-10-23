@@ -103,6 +103,7 @@ class CAR(StrEnum):
   TUCSON_HYBRID_4TH_GEN = "HYUNDAI TUCSON HYBRID 4TH GEN"
   SANTA_CRUZ_1ST_GEN = "HYUNDAI SANTA CRUZ 1ST GEN"
   CUSTIN_1ST_GEN = "HYUNDAI CUSTIN 1ST GEN"
+  STARRIA_2023 = "HYUNDAI STARRIA_2023"
 
   # Kia
   KIA_FORTE = "KIA FORTE E 2018 & GT 2021"
@@ -1082,6 +1083,19 @@ FW_VERSIONS = {
     (Ecu.transmission, 0x7e1, None): [
       b'\xf1\x00bcsh8p54  U928\x00\x00\x00\x00\x00\x00SKU0T15KB2\x92U\xf9M',
     ],
+  },
+  CAR.STARRIA_2023: {
+    (Ecu.fwdCamera, 0x7D0, None): [
+      b'\xf1\x00US4_ RDR -----      1.00 1.00 99110-CG000         ',
+    ],
+    (Ecu.cornerRadar, 0x7B7, None): [
+      b'\xf1\x00US4 BCW RR 2.00 , 2.00 (xT\x97#\x01S\x06\x14',
+    ],
+    (Ecu.fwdCamera, 0x7C4, None): [
+      b'\xf1\x00US4 MFC  AT KOR LHD 1.00 1.06 99211-CG000 230524',
+    ],
+    (Ecu.hvac, 0x7B3, None): [
+      b'\xf1\x00US4   97255-CG160CONTROL UNIT        1.02.00US4DATC(-)0.9     ',
   },
   CAR.KIA_STINGER: {
     (Ecu.fwdRadar, 0x7d0, None): [
